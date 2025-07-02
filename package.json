@@ -1,0 +1,47 @@
+{
+  "name": "esbaar-bigin-lead-creator-outlook-addin",
+  "version": "1.0.0",
+  "description": "ESBAAR Outlook add-in to create leads in Bigin CRM from email threads",
+  "main": "taskpane.html",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "build:dev": "webpack --mode=development",
+    "dev-server": "webpack serve --mode=development",
+    "start": "office-addin-dev-server --source-location https://localhost:3000/taskpane.html",
+    "validate": "office-addin-manifest validate manifest.xml",
+    "sideload": "office-addin-debugging start manifest.xml outlook"
+  },
+  "keywords": [
+    "Office Add-in",
+    "Outlook",
+    "Bigin CRM",
+    "Lead Generation",
+    "ESBAAR"
+  ],
+  "author": "ESBAAR",
+  "license": "MIT",
+  "dependencies": {
+    "@microsoft/office-js": "^1.1.85",
+    "@microsoft/office-js-helpers": "^1.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.21.0",
+    "babel-loader": "^9.1.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "office-addin-debugging": "^5.0.0",
+    "office-addin-dev-certs": "^1.11.0",
+    "office-addin-dev-server": "^2.0.0",
+    "office-addin-manifest": "^1.12.0",
+    "style-loader": "^3.3.0",
+    "webpack": "^5.76.0",
+    "webpack-cli": "^5.0.0",
+    "webpack-dev-server": "^4.9.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
